@@ -1,0 +1,194 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.6
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+h1,
+h2,
+h3,
+p{
+    margin: 0;
+}
+section{
+    padding: 7rem 0;
+}
+.spacing>* + *{
+    margin-block-start: 2rem ;
+}
+.container{
+    width: 85%;
+    max-width: 65rem;
+    margin: 0 auto;
+}
+.split{
+    display: flex;
+    gap:1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.split > *{
+    flex-basis: 30%;
+    min-width: 15rem;
+}
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.5rem 1.25rem;
+    background-color: blue;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    border-radius: 0.25rem;
+    -webkit-border-radius: 0.25rem;
+    -moz-border-radius: 0.25rem;
+    -ms-border-radius: 0.25rem;
+    -o-border-radius: 0.25rem;
+    transition:  transform 250ms ease-in-out,    opacity 250ms linear;
+    -webkit-transition:  transform 250ms ease-in-out,    opacity 250ms linear;
+    -moz-transition:  transform 250ms ease-in-out,    opacity 250ms linear;
+    -ms-transition:  transform 250ms ease-in-out,    opacity 250ms linear;
+    -o-transition:  transform 250ms ease-in-out,    opacity 250ms linear;
+}
+.btn:hover,
+.btn:focus{
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    opacity: 0.9;
+}
+.primary-title{
+    font-size: 4rem;
+    font-size: clamp(3rem, 5vw + 1rem , 4.5rem);
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+.section-title{
+    text-align: center;
+    font-size: clamp(2.5rem, 5vw + 1rem ,4rem);
+    line-height: 1;
+    color: #17353d;
+    margin-block-end: 5rem;
+}
+.hero{
+    color: white;
+    text-align: center;
+    padding: 15rem 0;
+    background: #222;
+      
+}
+@supports (background-blend-mode: multiply){
+    .hero{
+        background: url(../images/shoe-3.png) no-repeat center,
+        radial-gradient(#555,#000);
+        background-attachment: fixed;
+    }
+}
+.featured{
+    background-color: #eee;
+}
+.featured .feature-item{
+    display: block;
+    position: relative;
+    transform: scale(0.85);
+    color: #333;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1.2;
+    -webkit-transform: scale(0.85);
+    -moz-transform: scale(0.85);
+    -ms-transform: scale(0.85);
+    -o-transform: scale(0.85);
+    transition: transform 250ms ease-in-out;
+    -webkit-transition: transform 250ms ease-in-out;
+    -moz-transition: transform 250ms ease-in-out;
+    -ms-transition: transform 250ms ease-in-out;
+    -o-transition: transform 250ms ease-in-out;
+}
+.featured .feature-item:hover,
+.featured .feature-item:focus{
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+.featured .feature-item::after{
+    content: '';
+    left: 10%;
+    top: 10%;
+    z-index: -1;
+    position: absolute;
+    padding: 80% 80% 0 0;
+    background-color: #2193b0;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.featured .feature-item span{
+    display: block;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+.featured .feature-item .featured-details{
+    opacity: 0;
+    transition: opacity 250ms linear;
+    -webkit-transition: opacity 250ms linear;
+    -moz-transition: opacity 250ms linear;
+    -ms-transition: opacity 250ms linear;
+    -o-transition: opacity 250ms linear;
+}
+.featured .feature-item:hover .featured-details,
+.featured .feature-item:focus .featured-details{
+    opacity: 1;
+}
+
+.product{
+    padding: 3em ;
+    text-align: center;
+    border-radius: 1em;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -o-border-radius: 1em;
+    margin-block-end: 3em;
+}
+.product-title{
+    font-size: 4rem;
+    color: white;
+    line-height: 1.1;
+}
+.product.red{
+    background: radial-gradient(#faa700,#e48d00);
+
+}
+.product.red .btn{
+    background: #a1173c;
+}
+.product.white{
+    background: radial-gradient(#fce4b3,#eac886);
+
+}
+.product.white .btn{
+    background: #2f4858;
+}
+.product.blue{
+    background: radial-gradient(#6dd5ed,#2193b0);
+
+}
+.product.blue .btn{
+    background: #008951;
+}
